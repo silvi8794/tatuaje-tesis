@@ -1,0 +1,167 @@
+.zoom_personality {
+     padding: 50px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+ 
+    /* Aumentamos el ancho y la altura durante 1 segundo */
+    transition: width 1s, height 1s, transform 1s;
+    -moz-transition: width 1s, height 1s, -moz-transform 1s;
+    -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+    -o-transition: width 1s, height 1s,-o-transform 1s;
+
+  }
+
+  .zoom_personality:hover {
+/*     -ms-transform: scale(1.5); /* IE 9 */
+   /* -webkit-transform: scale(1.5); /* Safari 3-8 */
+   /* transform: scale(1.5);  */
+
+    /* tranformamos  su tamaño al pasar el mouse por encima con scale(2.5). */
+    transform : scale(1.5);
+    -moz-transform : scale(1.5);      /* Firefox */
+    -webkit-transform : scale(1.5);   /* Chrome - Safari */
+    -o-transform : scale(1.5);        /* Opera */
+
+  }
+
+  .size{
+    width: initial;
+    height: initial;
+  }
+
+  .tamanio {
+      width: 300px;
+      height: 300px;
+  }
+
+
+/* DESCOLOREAR */
+
+/* Colorize-zoom Container */
+.img-hover-zoom--colorize img {
+    transition: transform .5s, filter 0.4s ease-in-out;
+    filter: grayscale(100%);
+  }
+
+  /* The Transformation */
+  .img-hover-zoom--colorize:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+
+
+  /* Brightness-zoom Container */
+  .img-hover-zoom--brightness img {
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+  }
+
+  /* The Transformation */
+  .img-hover-zoom--brightness:hover img {
+    filter: brightness(100%);
+    transform: scale(1.3);
+  }
+
+
+
+
+
+
+  .img-hover-zoom {
+    background: #222f3e;
+    height: 300px;
+    overflow: hidden;
+    border-radius: .5em;
+    border: 5px solid rgba(255, 255, 255, .05);
+}
+.img-hover-zoom--basic img {
+    transition: transform .5s ease;
+  }
+
+  .img-hover-zoom--basic:hover img {
+    transform: scale(1.5);
+  }
+
+
+/* ------------ container 1 --------------- */
+.zoom-effect-container {
+    float: left;
+    position: relative;
+    width: 340px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.image-card {
+    position: relative;
+    top: 0;
+    left: 0;
+
+
+  }
+
+  .image-card img {
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+
+  .zoom-effect-container:hover .image-card img {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+
+
+/* ------------ container 2 --------------- */
+  .zoom-effect-container-dos {
+    float: left;
+    position: relative;
+    width: 340px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.image-card-dos {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+  .image-card-dos img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);
+  }
+
+  .zoom-effect-container-dos:hover .image-card-dos img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+
+  /* ------------ container 3 ------------ */
+  .zoom-effect-container-tres {
+    float: left;
+    position: relative;
+    width: 340px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.image-card-tres {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+  .image-card-tres img {
+    transition: transform .5s ease-in-out;
+  }
+
+  .zoom-effect-container-tres:hover .image-card-tres img {
+    transform: scale(1.5) rotate(25deg);
+  }
+
+

@@ -1,0 +1,490 @@
+/* * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+} */
+
+/* #grad1 {
+    background-color: : #9C27B0;
+    background-image: linear-gradient(120deg, #FF4081, #81D4FA)
+} */
+
+@font-face {
+    font-family: "Roboto_Regular";
+    src: url("../fonts/nucooks/roboto_regular.ttf");
+}
+@font-face {
+    font-family: "Roboto_Bold";
+    src: url("../fonts/nucooks/ROBOTO-BOLD.TTF");
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9e9e9e;
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 8px 4px 8px;
+    /*     border: none; */
+    border: 1px solid #33e0fe;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Roboto_Regular";
+    /*     color: #2C3E50; */
+    font-size: 14px;
+    /*     letter-spacing: 1px */
+}
+
+#select-custom .select2-container {
+    width: 100% !important;
+}
+#select-custom .select2-container input {
+    padding: 0px 8px 4px 8px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    /*     letter-spacing: 1px; */
+}
+
+#select-custom .select2 .selection span {
+    border-color: #33e0fe !important;
+}
+#select-custom .select2 .selection span .select2-search__field {
+    border: 0;
+}
+
+.select2 b {
+    border-color: #33e0fe transparent !important;
+}
+
+.checkboxLabel input {
+    display: none;
+}
+.checkboxLabel input:checked ~ span {
+    border: 1px solid red;
+}
+.checkboxLabel span {
+    border: 1px solid gray;
+    padding: 7px;
+    display: inline-block;
+}
+
+.inputSelect2 + span {
+    border: 1px solid #33e0fe !important;
+    border-radius: 6px;
+    text-align: left;
+}
+
+/* #subCategory + span{
+    border: 1px solid #33E0FE !important;
+    border-radius: 6px ;
+    text-align: left;
+}
+#timeCook + span{
+    border: 1px solid #33E0FE !important;
+    border-radius: 6px ;
+    text-align: left;
+} */
+
+#contentTable input {
+    padding: 0px 0px 0px 0px;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2c3e50;
+    font-size: 16px;
+    /*     letter-spacing: 1px */
+}
+
+/* DATA TABLE */
+#listIngredientRecipe_wrapper .row:nth-child(1) > div:nth-child(1) {
+    display: none;
+}
+#listIngredientRecipe_wrapper .row:nth-child(1) > div:nth-child(2) {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+#listIngredientRecipe_wrapper
+    .row:nth-child(1)
+    > div:nth-child(2)
+    .dataTables_filter
+    label {
+    width: 100%;
+    text-align: left;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    /*     -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0 */
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #33e0fe;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    /*     font-weight: bold; */
+    color: black;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #33e0fe;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    background: #808080;
+    /*     font-weight: bold; */
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#btoStyle {
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    background-color: #33e0fe;
+    border-radius: 5px;
+    color: black;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    padding: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
+.card {
+    /*     z-index: 0; */
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+#progressbar .active {
+    color: #000000;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+/* #progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+} */
+
+#progressbar li .step {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    background: white;
+    border-radius: 50%;
+    margin: 10px auto;
+    padding: 2px;
+    fill: transparent;
+    stroke: #33e0fe;
+    border: 1px solid #33e0fe;
+}
+
+#progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+#progressbar li.active .step,
+#progressbar li.active:after {
+    background: #33e0fe;
+    stroke: white;
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px;
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.deleteIngredient {
+    color: red;
+}
+
+.deleteIngredient:hover {
+    color: cyan;
+}
+
+/* #myTable {
+    border: 1px solid red !important;
+}
+ */
+#myTable td:hover {
+    cursor: move;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+table.table-head-fixed tr {
+    background-color: #eee;
+    border: 1px solid #eee;
+}
+
+table.table-head-fixed tr:nth-child(2) {
+    background-color: #eee;
+}
+table.table-head-fixed tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table.table-head-fixed tr:nth-child(odd) {
+    background-color: #fff;
+}
+fieldset {
+    color: #a4adb3;
+}
+
+#listIngredientRecipe_filter label {
+    display: flex;
+    align-items: center;
+}
+#listIngredientRecipe_filter input {
+    width: 300px;
+    margin: 0 0 0 10px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff !important;
+    border-color: #33e0fe !important;
+    background-color: #33e0fe !important;
+    box-shadow: none;
+}
+.custom-control-label::after,
+.custom-control-label::before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.custom-control {
+    padding: 0 !important;
+}
+
+#tagClean {
+    width: 100px;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    background: #808080;
+    /*     font-weight: bold; */
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+#tag {
+    width: 143px;
+    background: #33e0fe;
+    font-family: "Roboto_Regular";
+    font-size: 14px;
+    /*     font-weight: bold; */
+    color: black;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#progressbar .active svg {
+    fill: white;
+    stroke: #33e0fe;
+}
+#progressbar li svg {
+    fill: #33e0fe;
+    stroke: white;
+}
+.styleSVG {
+    font-family: "Roboto_Bold";
+    font-size: 14px;
+}
+
+.table td {
+    border: 1px solid #ddd !important;
+}
+
+table.table-head-fixed tr:nth-child(even),
+table.table-head-fixed tr:nth-child(even) input {
+    background-color: #eee;
+}
+
+table thead th {
+    border: 1px solid #ddd;
+}
+
+#sortable tr:nth-child(even),
+#sortable tr:nth-child(even) input {
+    background-color: #eee;
+}
+#sortable thead th {
+    border: 1px solid #ddd;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: gray !important;
+    color: white !important;
+    border-color: gray;
+}
+
+.pagination .page-link {
+    background-color: white !important;
+    color: gray !important;
+}
+
+.pagination .fas {
+    line-height: 1.25;
+}
+
+td.paddTd {
+    padding: 7px 0px 7px 5px !important;
+}
