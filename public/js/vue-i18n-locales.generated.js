@@ -1,0 +1,536 @@
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+        typeof define === 'function' && define.amd ? define(factory) :
+            (global.vuei18nLocales = factory());
+}(this, (function () { 'use strict';
+    return {
+    "en": {
+        "auth": {
+            "failed": "These credentials do not match our records.",
+            "throttle": "Too many login attempts. Please try again in {seconds} seconds."
+        },
+        "messages": {
+            "welcome": "Welcome to Nucooks.com",
+            "recipe": "Recipe",
+            "login": "LOGIN",
+            "carouselTitle": "¿What are you cooking today? Inspiring to your liking",
+            "carouselDescription": "Inspiring to your liking",
+            "news": "NEWS",
+            "detailsNewOne": "VEGAN",
+            "detailsNewTo": "MEAT AND SAUSAGE ALTERNATIVES",
+            "detailsNewThree": "ROAST MEAT",
+            "detailsNewFour": "PASTA",
+            "detailsNewFive": "SNACKS",
+            "popular": "POPULAR",
+            "detailsPopularOne": "FISH",
+            "detailsPopularTwo": "PIZZA",
+            "detailsPopularThree": "BREADED",
+            "titleRecipe": "Easy Snacks at Cubetera",
+            "descriptionRecipe": "In case you had doubts that the buckets are your best allies in the kitchen!",
+            "btoMore": "See more",
+            "recibeNewLetters": "Receive easy recipes and cooking tricks",
+            "footerOne": "PRIVACY POLICY",
+            "footerTo": "USER AGREEMENT",
+            "footerThree": "COPYRIGHT 2019",
+            "accountExist": "Account already exists",
+            "successAccount": "Account created successfully check your email please",
+            "notWhereLogin": "You cannot log in to this place.",
+            "activateAccount": "You must Activate your account. Check your email.",
+            "credentialsError": "The account does not exist or the password is incorrect.",
+            "requiredPass": "The password field is required.",
+            "requiredConfirmPass": "The confirmed password field is required.",
+            "samePass": "The Password and Confirmed Password must match.",
+            "requiredEmail": "The email field is required.",
+            "errorEmail": "The email must be a valid email address.",
+            "titleStepsOne": "Choose your recipe",
+            "titleStepsTwo": "Place your order",
+            "titleStepsThree": "RECEIVES",
+            "subtitleStepsOne": "Choose the recipe to prepare and do not forget to ask for the ingredients and utensils",
+            "subtitleStepsTwo": "Choose the recipe to prepare and do not forget to ask for the ingredients and utensils",
+            "subtitleStepsThree": "Get your order as quickly as possible and enjoy your meal"
+        },
+        "pagination": {
+            "previous": "&laquo; Previous",
+            "next": "Next &raquo;"
+        },
+        "passwords": {
+            "reset": "Your password has been reset!",
+            "sent": "We have e-mailed your password reset link!",
+            "token": "This password reset token is invalid.",
+            "user": "We can't find a user with that e-mail address."
+        },
+        "validation": {
+            "accepted": "The {attribute} must be accepted.",
+            "active_url": "The {attribute} is not a valid URL.",
+            "after": "The {attribute} must be a date after {date}.",
+            "after_or_equal": "The {attribute} must be a date after or equal to {date}.",
+            "alpha": "The {attribute} may only contain letters.",
+            "alpha_dash": "The {attribute} may only contain letters, numbers, dashes and underscores.",
+            "alpha_num": "The {attribute} may only contain letters and numbers.",
+            "array": "The {attribute} must be an array.",
+            "before": "The {attribute} must be a date before {date}.",
+            "before_or_equal": "The {attribute} must be a date before or equal to {date}.",
+            "between": {
+                "numeric": "The {attribute} must be between {min} and {max}.",
+                "file": "The {attribute} must be between {min} and {max} kilobytes.",
+                "string": "The {attribute} must be between {min} and {max} characters.",
+                "array": "The {attribute} must have between {min} and {max} items."
+            },
+            "boolean": "The {attribute} field must be true or false.",
+            "confirmed": "The {attribute} confirmation does not match.",
+            "date": "The {attribute} is not a valid date.",
+            "date_equals": "The {attribute} must be a date equal to {date}.",
+            "date_format": "The {attribute} does not match the format {format}.",
+            "different": "The {attribute} and {other} must be different.",
+            "digits": "The {attribute} must be {digits} digits.",
+            "digits_between": "The {attribute} must be between {min} and {max} digits.",
+            "dimensions": "The {attribute} has invalid image dimensions.",
+            "distinct": "The {attribute} field has a duplicate value.",
+            "email": "The {attribute} must be a valid email address.",
+            "ends_with": "The {attribute} must end with one of the following: {values}",
+            "exists": "The selected {attribute} is invalid.",
+            "file": "The {attribute} must be a file.",
+            "filled": "The {attribute} field must have a value.",
+            "gt": {
+                "numeric": "The {attribute} must be greater than {value}.",
+                "file": "The {attribute} must be greater than {value} kilobytes.",
+                "string": "The {attribute} must be greater than {value} characters.",
+                "array": "The {attribute} must have more than {value} items."
+            },
+            "gte": {
+                "numeric": "The {attribute} must be greater than or equal {value}.",
+                "file": "The {attribute} must be greater than or equal {value} kilobytes.",
+                "string": "The {attribute} must be greater than or equal {value} characters.",
+                "array": "The {attribute} must have {value} items or more."
+            },
+            "image": "The {attribute} must be an image.",
+            "in": "The selected {attribute} is invalid.",
+            "in_array": "The {attribute} field does not exist in {other}.",
+            "integer": "The {attribute} must be an integer.",
+            "ip": "The {attribute} must be a valid IP address.",
+            "ipv4": "The {attribute} must be a valid IPv4 address.",
+            "ipv6": "The {attribute} must be a valid IPv6 address.",
+            "json": "The {attribute} must be a valid JSON string.",
+            "lt": {
+                "numeric": "The {attribute} must be less than {value}.",
+                "file": "The {attribute} must be less than {value} kilobytes.",
+                "string": "The {attribute} must be less than {value} characters.",
+                "array": "The {attribute} must have less than {value} items."
+            },
+            "lte": {
+                "numeric": "The {attribute} must be less than or equal {value}.",
+                "file": "The {attribute} must be less than or equal {value} kilobytes.",
+                "string": "The {attribute} must be less than or equal {value} characters.",
+                "array": "The {attribute} must not have more than {value} items."
+            },
+            "max": {
+                "numeric": "The {attribute} may not be greater than {max}.",
+                "file": "The {attribute} may not be greater than {max} kilobytes.",
+                "string": "The {attribute} may not be greater than {max} characters.",
+                "array": "The {attribute} may not have more than {max} items."
+            },
+            "mimes": "The {attribute} must be a file of type: {values}.",
+            "mimetypes": "The {attribute} must be a file of type: {values}.",
+            "min": {
+                "numeric": "The {attribute} must be at least {min}.",
+                "file": "The {attribute} must be at least {min} kilobytes.",
+                "string": "The {attribute} must be at least {min} characters.",
+                "array": "The {attribute} must have at least {min} items."
+            },
+            "not_in": "The selected {attribute} is invalid.",
+            "not_regex": "The {attribute} format is invalid.",
+            "numeric": "The {attribute} must be a number.",
+            "present": "The {attribute} field must be present.",
+            "regex": "The {attribute} format is invalid.",
+            "required": "The {attribute} field is required.",
+            "required_if": "The {attribute} field is required when {other} is {value}.",
+            "required_unless": "The {attribute} field is required unless {other} is in {values}.",
+            "required_with": "The {attribute} field is required when {values} is present.",
+            "required_with_all": "The {attribute} field is required when {values} are present.",
+            "required_without": "The {attribute} field is required when {values} is not present.",
+            "required_without_all": "The {attribute} field is required when none of {values} are present.",
+            "same": "The {attribute} and {other} must match.",
+            "size": {
+                "numeric": "The {attribute} must be {size}.",
+                "file": "The {attribute} must be {size} kilobytes.",
+                "string": "The {attribute} must be {size} characters.",
+                "array": "The {attribute} must contain {size} items."
+            },
+            "starts_with": "The {attribute} must start with one of the following: {values}",
+            "string": "The {attribute} must be a string.",
+            "timezone": "The {attribute} must be a valid zone.",
+            "unique": "The {attribute} has already been taken.",
+            "uploaded": "The {attribute} failed to upload.",
+            "url": "The {attribute} format is invalid.",
+            "uuid": "The {attribute} must be a valid UUID.",
+            "custom": {
+                "attribute-name": {
+                    "rule-name": "custom-message"
+                }
+            },
+            "attributes": []
+        }
+    },
+    "es": {
+        "E-Mail Address": "Correo electrónico",
+        "Password": "Contraseña",
+        "Remember Me": "Recuérdame",
+        "Login": "Acceder",
+        "Forgot Your Password?": "¿Olvidaste tu contraseña?",
+        "Register": "Registro",
+        "Name": "Nombre",
+        "Confirm Password": "Confirmar contraseña",
+        "Reset Password": "Restablecer contraseña",
+        "Reset Password Notification": "Aviso para restablecer contraseña",
+        "You are receiving this email because we received a password reset request for your account.": "Estás recibiendo este email porque se ha solicitado un cambio de contraseña para tu cuenta.",
+        "This password reset link will expire in {count} minutes.": "Este enlace para restablecer la contraseña caduca en {count} minutos.",
+        "If you did not request a password reset, no further action is required.": "Si no has solicitado un cambio de contraseña, puedes ignorar o eliminar este e-mail.",
+        "Please confirm your password before continuing.": "Por favor confirme su contraseña antes de continuar.",
+        "Regards": "Saludos",
+        "Whoops!": "¡Ups!",
+        "Hello!": "¡Hola!",
+        "If you’re having trouble clicking the \"{actionText}\" button, copy and paste the URL below\ninto your web browser: [{actionURL}]({actionURL})": "Si tienes problemas haciendo click en el botón \"{actionText}\", copia y pega el siguiente\nenlace en tu navegador: [{actionURL}]({actionURL})",
+        "Send Password Reset Link": "Enviar enlace para restablecer contraseña",
+        "Logout": "Cerrar sesión",
+        "Verify Email Address": "Confirmar correo electrónico",
+        "Please click the button below to verify your email address.": "Por favor pulsa el siguiente botón para confirmar tu correo electrónico.",
+        "If you did not create an account, no further action is required.": "Si no has creado ninguna cuenta, puedes ignorar o eliminar este e-mail.",
+        "Verify Your Email Address": "Confirma tu correo electrónico",
+        "A fresh verification link has been sent to your email address.": "Se ha enviado un nuevo enlace de verificación a tu correo electrónico.",
+        "Before proceeding, please check your email for a verification link.": "Antes de poder continuar, por favor, confirma tu correo electrónico con el enlace que te hemos enviado.",
+        "If you did not receive the email": "Si no has recibido el email",
+        "click here to request another": "pulsa aquí para que te enviemos otro",
+        "auth": {
+            "failed": "Estas credenciales no coinciden con nuestros registros.",
+            "throttle": "Demasiados intentos de acceso. Por favor inténtelo de nuevo en {seconds} segundos."
+        },
+        "messages": {
+            "welcome": "Bienvenido a Nucooks.com",
+            "recipe": "Receta",
+            "login": "INICIAR SESIÓN",
+            "carouselTitle": "¿Que vas a cocinar hoy? Inspirando a tu gusto",
+            "carouselDescription": "Inspirando a tu gusto",
+            "news": "NOVEDADES",
+            "detailsNewOne": "VEGANA",
+            "detailsNewTo": "ALTERNATIVAS DE CARNE Y SALCHICHA",
+            "detailsNewThree": "CARNE ASADA",
+            "detailsNewFour": "PASTA",
+            "detailsNewFive": "SNACKS",
+            "popular": "POPULARES",
+            "detailsPopularOne": "PESCADOS",
+            "detailsPopularTwo": "PIZZA",
+            "detailsPopularThree": "MILANESA",
+            "titleRecipe": "Bocados Faciles en Cubetera",
+            "descriptionRecipe": "Por si te quedaban dudas que las cubeteras son tus mejores aliadas en la cocina!",
+            "btoMore": "Ver mas",
+            "recibeNewLetters": "Recibe recetas fáciles y trucos de cocina",
+            "footerOne": "POLITICA DE PRIVACIDAD",
+            "footerTo": "ACUERDO DE USUARIO",
+            "footerThree": "COPYRIGHT 2019",
+            "accountExist": "La cuenta ya Existe",
+            "successAccount": "Cuenta creada con exito revise su correo por favor",
+            "notWhereLogin": "Ud no puede loguearse en este lugar.",
+            "activateAccount": "Debe Activar su cuenta. Revise su email.",
+            "credentialsError": "La cuenta no existe o la contraseña es incorrecta.",
+            "requiredPass": "El campo password es obligatorio.",
+            "requiredConfirmPass": "El campo confirmación de password es obligatorio.",
+            "samePass": "Los campos Password y Confirmed Password eben coincidir.",
+            "requiredEmail": "El campo email es obligatorio.",
+            "errorEmail": "El campo email debe ser una dirección de correo válida.",
+            "titleStepsOne": "Elegí tu receta",
+            "titleStepsTwo": "Hacé tu pedido",
+            "titleStepsThree": "RECIBE",
+            "subtitleStepsOne": "Elige la receta a preparar y no te olvides de pedir los ingredientes y los utensilios",
+            "subtitleStepsTwo": "Elige la receta a preparar y no te olvides de pedir los ingredientes y los utensilios",
+            "subtitleStepsThree": "Obtenga su pedido lo más rápido y disfrute de su comida"
+        },
+        "pagination": {
+            "previous": "&laquo; Anterior",
+            "next": "Siguiente &raquo;"
+        },
+        "passwords": {
+            "reset": "¡Su contraseña ha sido restablecida!",
+            "sent": "¡Recordatorio de contraseña enviado!",
+            "token": "Este token de restablecimiento de contraseña es inválido.",
+            "user": "No se ha encontrado un usuario con esa dirección de correo."
+        },
+        "validation": {
+            "accepted": "El campo {attribute} debe ser aceptado.",
+            "active_url": "El campo {attribute} no es una URL válida.",
+            "after": "El campo {attribute} debe ser una fecha posterior a {date}.",
+            "after_or_equal": "El campo {attribute} debe ser una fecha posterior o igual a {date}.",
+            "alpha": "El campo {attribute} solo puede contener letras.",
+            "alpha_dash": "El campo {attribute} solo puede contener letras, números, guiones y guiones bajos.",
+            "alpha_num": "El campo {attribute} solo puede contener letras y números.",
+            "array": "El campo {attribute} debe ser un array.",
+            "before": "El campo {attribute} debe ser una fecha anterior a {date}.",
+            "before_or_equal": "El campo {attribute} debe ser una fecha anterior o igual a {date}.",
+            "between": {
+                "numeric": "El campo {attribute} debe ser un valor entre {min} y {max}.",
+                "file": "El archivo {attribute} debe pesar entre {min} y {max} kilobytes.",
+                "string": "El campo {attribute} debe contener entre {min} y {max} caracteres.",
+                "array": "El campo {attribute} debe contener entre {min} y {max} elementos."
+            },
+            "boolean": "El campo {attribute} debe ser verdadero o falso.",
+            "confirmed": "El campo confirmación de {attribute} no coincide.",
+            "date": "El campo {attribute} no corresponde con una fecha válida.",
+            "date_equals": "El campo {attribute} debe ser una fecha igual a {date}.",
+            "date_format": "El campo {attribute} no corresponde con el formato de fecha {format}.",
+            "different": "Los campos {attribute} y {other} deben ser diferentes.",
+            "digits": "El campo {attribute} debe ser un número de {digits} dígitos.",
+            "digits_between": "El campo {attribute} debe contener entre {min} y {max} dígitos.",
+            "dimensions": "El campo {attribute} tiene dimensiones de imagen inválidas.",
+            "distinct": "El campo {attribute} tiene un valor duplicado.",
+            "email": "El campo {attribute} debe ser una dirección de correo válida.",
+            "ends_with": "El campo {attribute} debe finalizar con alguno de los siguientes valores: {values}",
+            "exists": "El campo {attribute} seleccionado no existe.",
+            "file": "El campo {attribute} debe ser un archivo.",
+            "filled": "El campo {attribute} debe tener un valor.",
+            "gt": {
+                "numeric": "El campo {attribute} debe ser mayor a {value}.",
+                "file": "El archivo {attribute} debe pesar más de {value} kilobytes.",
+                "string": "El campo {attribute} debe contener más de {value} caracteres.",
+                "array": "El campo {attribute} debe contener más de {value} elementos."
+            },
+            "gte": {
+                "numeric": "El campo {attribute} debe ser mayor o igual a {value}.",
+                "file": "El archivo {attribute} debe pesar {value} o más kilobytes.",
+                "string": "El campo {attribute} debe contener {value} o más caracteres.",
+                "array": "El campo {attribute} debe contener {value} o más elementos."
+            },
+            "image": "El campo {attribute} debe ser una imagen.",
+            "in": "El campo {attribute} es inválido.",
+            "in_array": "El campo {attribute} no existe en {other}.",
+            "integer": "El campo {attribute} debe ser un número entero.",
+            "ip": "El campo {attribute} debe ser una dirección IP válida.",
+            "ipv4": "El campo {attribute} debe ser una dirección IPv4 válida.",
+            "ipv6": "El campo {attribute} debe ser una dirección IPv6 válida.",
+            "json": "El campo {attribute} debe ser una cadena de texto JSON válida.",
+            "lt": {
+                "numeric": "El campo {attribute} debe ser menor a {value}.",
+                "file": "El archivo {attribute} debe pesar menos de {value} kilobytes.",
+                "string": "El campo {attribute} debe contener menos de {value} caracteres.",
+                "array": "El campo {attribute} debe contener menos de {value} elementos."
+            },
+            "lte": {
+                "numeric": "El campo {attribute} debe ser menor o igual a {value}.",
+                "file": "El archivo {attribute} debe pesar {value} o menos kilobytes.",
+                "string": "El campo {attribute} debe contener {value} o menos caracteres.",
+                "array": "El campo {attribute} debe contener {value} o menos elementos."
+            },
+            "max": {
+                "numeric": "El campo {attribute} no debe ser mayor a {max}.",
+                "file": "El archivo {attribute} no debe pesar más de {max} kilobytes.",
+                "string": "El campo {attribute} no debe contener más de {max} caracteres.",
+                "array": "El campo {attribute} no debe contener más de {max} elementos."
+            },
+            "mimes": "El campo {attribute} debe ser un archivo de tipo: {values}.",
+            "mimetypes": "El campo {attribute} debe ser un archivo de tipo: {values}.",
+            "min": {
+                "numeric": "El campo {attribute} debe ser al menos {min}.",
+                "file": "El archivo {attribute} debe pesar al menos {min} kilobytes.",
+                "string": "El campo {attribute} debe contener al menos {min} caracteres.",
+                "array": "El campo {attribute} debe contener al menos {min} elementos."
+            },
+            "not_in": "El campo {attribute} seleccionado es inválido.",
+            "not_regex": "El formato del campo {attribute} es inválido.",
+            "numeric": "El campo {attribute} debe ser un número.",
+            "password": "La contraseña es incorrecta.",
+            "present": "El campo {attribute} debe estar presente.",
+            "regex": "El formato del campo {attribute} es inválido.",
+            "required": "El campo {attribute} es obligatorio.",
+            "required_if": "El campo {attribute} es obligatorio cuando el campo {other} es {value}.",
+            "required_unless": "El campo {attribute} es requerido a menos que {other} se encuentre en {values}.",
+            "required_with": "El campo {attribute} es obligatorio cuando {values} está presente.",
+            "required_with_all": "El campo {attribute} es obligatorio cuando {values} están presentes.",
+            "required_without": "El campo {attribute} es obligatorio cuando {values} no está presente.",
+            "required_without_all": "El campo {attribute} es obligatorio cuando ninguno de los campos {values} están presentes.",
+            "same": "Los campos {attribute} y {other} deben coincidir.",
+            "size": {
+                "numeric": "El campo {attribute} debe ser {size}.",
+                "file": "El archivo {attribute} debe pesar {size} kilobytes.",
+                "string": "El campo {attribute} debe contener {size} caracteres.",
+                "array": "El campo {attribute} debe contener {size} elementos."
+            },
+            "starts_with": "El campo {attribute} debe comenzar con uno de los siguientes valores: {values}",
+            "string": "El campo {attribute} debe ser una cadena de caracteres.",
+            "timezone": "El campo {attribute} debe ser una zona horaria válida.",
+            "unique": "El valor del campo {attribute} ya está en uso.",
+            "uploaded": "El campo {attribute} no se pudo subir.",
+            "url": "El formato del campo {attribute} es inválido.",
+            "uuid": "El campo {attribute} debe ser un UUID válido.",
+            "custom": {
+                "attribute-name": {
+                    "rule-name": "custom-message"
+                }
+            },
+            "attributes": []
+        }
+    },
+    "pt-br": {
+        "auth": {
+            "failed": "Essas credenciais não correspondem aos nossos registros.",
+            "throttle": "Muitas tentativas de login. Tente novamente em {seconds} segundos."
+        },
+        "messages": {
+            "welcome": "Seja bem vindo e Nucooks.com",
+            "recipe": "Receita",
+            "login": "INICIAR SESSÃO",
+            "carouselTitle": "¿O que você vai cozinhar hoje? Inspirando ao seu gosto",
+            "carouselDescription": "Inspirando ao seu gosto",
+            "news": "NOTÍCIAS",
+            "detailsNewOne": "VEGANO",
+            "detailsNewTo": "ALTERNATIVAS DE CARNES E SALSICHAS",
+            "detailsNewThree": "CARNE ASSADA",
+            "detailsNewFour": "MASSA",
+            "detailsNewFive": "SNACKS",
+            "popular": "POPULAR",
+            "detailsPopularOne": "PEIXES",
+            "detailsPopularTwo": "PIZZA",
+            "detailsPopularThree": "MILANESE",
+            "titleRecipe": "Petiscos fáceis em Cubetera",
+            "descriptionRecipe": "Caso você tenha dúvidas de que os baldes são seus melhores aliados na cozinha!",
+            "btoMore": "Ver mais",
+            "recibeNewLetters": "Receba receitas fáceis e truques de cozinha",
+            "footerOne": "POLÍTICA DE PRIVACIDADE",
+            "footerTo": "ACORDO DE USUÁRIO",
+            "footerThree": "COPYRIGHT 2019",
+            "accountExist": "A conta já existe",
+            "successAccount": "Conta criada com sucesso, verifique seu e-mail, por favor",
+            "notWhereLogin": "Você não pode fazer login neste local.",
+            "activateAccount": "Você deve ativar sua conta. Verifique seu email",
+            "credentialsError": "A conta não existe ou a senha está incorreta.",
+            "requiredPass": "O campo password é obrigatório.",
+            "requiredConfirmPass": "O campo Confirmed password é obrigatório.",
+            "samePass": "Os campos Password e Confirmed Password corresponder.",
+            "requiredEmail": "O campo email é obrigatório.",
+            "errorEmail": "O campo Email deve ser um endereço de e-mail válido.",
+            "titleStepsOne": "Escolha sua receita",
+            "titleStepsTwo": "Faça seu pedido",
+            "titleStepsThree": "RECEBER",
+            "subtitleStepsOne": "Escolha a receita para preparar e não se esqueça de pedir os ingredientes e utensílios",
+            "subtitleStepsTwo": "Escolha a receita para preparar e não se esqueça de pedir os ingredientes e utensílios",
+            "subtitleStepsThree": "Faça o seu pedido o mais rápido possível e desfrute da sua refeição"
+        },
+        "pagination": {
+            "previous": "&laquo; Anterior",
+            "next": "Próximo &raquo;"
+        },
+        "passwords": {
+            "password": "A senha e a confirmação devem combinar e possuir pelo menos seis caracteres.",
+            "reset": "Sua senha foi redefinida!",
+            "sent": "Enviamos seu link de redefinição de senha por e-mail!",
+            "token": "Este token de redefinição de senha é inválido.",
+            "user": "Não encontramos um usuário com esse endereço de e-mail."
+        },
+        "validation": {
+            "accepted": "O campo {attribute} deve ser aceito.",
+            "active_url": "O campo {attribute} não é uma URL válida.",
+            "after": "O campo {attribute} deve ser uma data posterior a {date}.",
+            "after_or_equal": "O campo {attribute} deve ser uma data posterior ou igual a {date}.",
+            "alpha": "O campo {attribute} só pode conter letras.",
+            "alpha_dash": "O campo {attribute} só pode conter letras, números e traços.",
+            "alpha_num": "O campo {attribute} só pode conter letras e números.",
+            "array": "O campo {attribute} deve ser uma matriz.",
+            "before": "O campo {attribute} deve ser uma data anterior {date}.",
+            "before_or_equal": "O campo {attribute} deve ser uma data anterior ou igual a {date}.",
+            "between": {
+                "numeric": "O campo {attribute} deve ser entre {min} e {max}.",
+                "file": "O campo {attribute} deve ser entre {min} e {max} kilobytes.",
+                "string": "O campo {attribute} deve ser entre {min} e {max} caracteres.",
+                "array": "O campo {attribute} deve ter entre {min} e {max} itens."
+            },
+            "boolean": "O campo {attribute} deve ser verdadeiro ou falso.",
+            "confirmed": "O campo {attribute} de confirmação não confere.",
+            "date": "O campo {attribute} não é uma data válida.",
+            "date_format": "O campo {attribute} não corresponde ao formato {format}.",
+            "different": "Os campos {attribute} e {other} devem ser diferentes.",
+            "digits": "O campo {attribute} deve ter {digits} dígitos.",
+            "digits_between": "O campo {attribute} deve ter entre {min} e {max} dígitos.",
+            "dimensions": "O campo {attribute} tem dimensões de imagem inválidas.",
+            "distinct": "O campo {attribute} campo tem um valor duplicado.",
+            "email": "O campo {attribute} deve ser um endereço de e-mail válido.",
+            "exists": "O campo {attribute} selecionado é inválido.",
+            "file": "O campo {attribute} deve ser um arquivo.",
+            "filled": "O campo {attribute} deve ter um valor.",
+            "gt": {
+                "numeric": "O campo {attribute} deve ser maior que {value}.",
+                "file": "O campo {attribute} deve ser maior que {value} kilobytes.",
+                "string": "O campo {attribute} deve ser maior que {value} caracteres.",
+                "array": "O campo {attribute} deve conter mais de {value} itens."
+            },
+            "gte": {
+                "numeric": "O campo {attribute} deve ser maior ou igual a {value}.",
+                "file": "O campo {attribute} deve ser maior ou igual a {value} kilobytes.",
+                "string": "O campo {attribute} deve ser maior ou igual a {value} caracteres.",
+                "array": "O campo {attribute} deve conter {value} itens ou mais."
+            },
+            "image": "O campo {attribute} deve ser uma imagem.",
+            "in": "O campo {attribute} selecionado é inválido.",
+            "in_array": "O campo {attribute} não existe em {other}.",
+            "integer": "O campo {attribute} deve ser um número inteiro.",
+            "ip": "O campo {attribute} deve ser um endereço de IP válido.",
+            "ipv4": "O campo {attribute} deve ser um endereço IPv4 válido.",
+            "ipv6": "O campo {attribute} deve ser um endereço IPv6 válido.",
+            "json": "O campo {attribute} deve ser uma string JSON válida.",
+            "lt": {
+                "numeric": "O campo {attribute} deve ser menor que {value}.",
+                "file": "O campo {attribute} deve ser menor que {value} kilobytes.",
+                "string": "O campo {attribute} deve ser menor que {value} caracteres.",
+                "array": "O campo {attribute} deve conter menos de {value} itens."
+            },
+            "lte": {
+                "numeric": "O campo {attribute} deve ser menor ou igual a {value}.",
+                "file": "O campo {attribute} deve ser menor ou igual a {value} kilobytes.",
+                "string": "O campo {attribute} deve ser menor ou igual a {value} caracteres.",
+                "array": "O campo {attribute} não deve conter mais que {value} itens."
+            },
+            "max": {
+                "numeric": "O campo {attribute} não pode ser superior a {max}.",
+                "file": "O campo {attribute} não pode ser superior a {max} kilobytes.",
+                "string": "O campo {attribute} não pode ser superior a {max} caracteres.",
+                "array": "O campo {attribute} não pode ter mais do que {max} itens."
+            },
+            "mimes": "O campo {attribute} deve ser um arquivo do tipo: {values}.",
+            "mimetypes": "O campo {attribute} deve ser um arquivo do tipo: {values}.",
+            "min": {
+                "numeric": "O campo {attribute} deve ser pelo menos {min}.",
+                "file": "O campo {attribute} deve ter pelo menos {min} kilobytes.",
+                "string": "O campo {attribute} deve ter pelo menos {min} caracteres.",
+                "array": "O campo {attribute} deve ter pelo menos {min} itens."
+            },
+            "not_in": "O campo {attribute} selecionado é inválido.",
+            "not_regex": "O campo {attribute} possui um formato inválido.",
+            "numeric": "O campo {attribute} deve ser um número.",
+            "present": "O campo {attribute} deve estar presente.",
+            "regex": "O campo {attribute} tem um formato inválido.",
+            "required": "O campo {attribute} é obrigatório.",
+            "required_if": "O campo {attribute} é obrigatório quando {other} for {value}.",
+            "required_unless": "O campo {attribute} é obrigatório exceto quando {other} for {values}.",
+            "required_with": "O campo {attribute} é obrigatório quando {values} está presente.",
+            "required_with_all": "O campo {attribute} é obrigatório quando {values} está presente.",
+            "required_without": "O campo {attribute} é obrigatório quando {values} não está presente.",
+            "required_without_all": "O campo {attribute} é obrigatório quando nenhum dos {values} estão presentes.",
+            "same": "Os campos {attribute} e {other} devem corresponder.",
+            "size": {
+                "numeric": "O campo {attribute} deve ser {size}.",
+                "file": "O campo {attribute} deve ser {size} kilobytes.",
+                "string": "O campo {attribute} deve ser {size} caracteres.",
+                "array": "O campo {attribute} deve conter {size} itens."
+            },
+            "string": "O campo {attribute} deve ser uma string.",
+            "timezone": "O campo {attribute} deve ser uma zona válida.",
+            "unique": "O campo {attribute} já está sendo utilizado.",
+            "uploaded": "Ocorreu uma falha no upload do campo {attribute}.",
+            "url": "O campo {attribute} tem um formato inválido.",
+            "custom": {
+                "attribute-name": {
+                    "rule-name": "custom-message"
+                }
+            },
+            "attributes": []
+        }
+    }
+}
+
+})));
