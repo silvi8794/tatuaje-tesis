@@ -154,12 +154,12 @@ Route::group([
 /*Agregado para notificacion de turnos cancelados*/
 
 use App\User;
-Route::get('/notificacion', function(){
-    $users = User::find(3);
-    $users->notify(new \App\Notifications\turnoCancelado);
+//Route::get('/notificacion', function(){
+  //  $users = User::find(3);
+    //$users->notify(new \App\Notifications\turnoCancelado);
 
-    return "Notificacion enviada";
-});
+  //  return "Notificacion enviada";
+//});
 
 
 

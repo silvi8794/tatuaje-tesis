@@ -4,7 +4,7 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://tatuaje-tesis.test:90',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'es',
@@ -319,7 +319,7 @@
       array (
         'driver' => 'local',
         'root' => 'C:\\laragon\\www\\tatuaje-tesis\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://tatuaje-tesis.test:90/storage',
         'visibility' => 'public',
       ),
       's3' => 
