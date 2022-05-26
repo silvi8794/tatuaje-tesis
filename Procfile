@@ -1,3 +1,3 @@
 # Procfile
 
-release: bundle exec rails db:migrate --seed
+release: php artisan db:migrate --seed
