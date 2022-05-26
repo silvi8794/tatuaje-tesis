@@ -1,3 +1,3 @@
 # Procfile
 
-release: php artisan db:migrate --seed
+release: php artisan migrate --seed
