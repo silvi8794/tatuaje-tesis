@@ -215,6 +215,33 @@
     ),
     'prefix' => 'laravel_cache',
   ),
+  'cors' => 
+  array (
+    'paths' => 
+    array (
+      0 => 'api/*',
+    ),
+    'allowed_methods' => 
+    array (
+      0 => '*',
+    ),
+    'allowed_origins' => 
+    array (
+      0 => '*',
+    ),
+    'allowed_origins_patterns' => 
+    array (
+    ),
+    'allowed_headers' => 
+    array (
+      0 => '*',
+    ),
+    'exposed_headers' => 
+    array (
+    ),
+    'max_age' => 0,
+    'supports_credentials' => false,
+  ),
   'database' => 
   array (
     'default' => 'mysql',

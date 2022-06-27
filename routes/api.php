@@ -13,9 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+  //  return $request->user();
+//});
+
 Route::resource('categorias','CategoriaController');
 Route::resource('categoria_tatuajes', 'CategoriaTatuajeController');
 Route::resource('clientes', 'ClienteController');
@@ -44,3 +47,6 @@ Route::get('restaurar_sucursal/{id?}', 'SucursalController@restore');
 Route::get('categorias_eliminados', 'CategoriaController@trash');
 Route::get('restaurar_categoria/{id?}', 'CategoriaController@restore');
 Route::name('verify')->get('users/verify/{token}','UserController@verify');
+
+Route::name('loginMobile')->post('loginMobile', 'Auth\LoginController@loginMobile');
+//Route::name('logout')->post('logout',)
