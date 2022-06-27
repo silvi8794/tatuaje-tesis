@@ -68,22 +68,70 @@ class LoginController extends Controller
 
         if (Auth::validate($credentials)) {
             $user = Auth::getLastAttempted();
-            
+
                if($user->verified && is_null($user->verification_token)){
                    auth()->login($user);
                    return redirect()->to('home');
-                   
+
                }else{
                 Session::flash('message', 'Debe activar su cuenta desde su correo por favor');
                 return back()->withInput()->withErrors(['message'=>'Debe activar su cuenta desde su correo por favor']);
                 }
-            
+
         } else {
             Session::flash('flash_message', 'Esta cuenta no existe');
             Session::flash('flash_message_class', 'danger');
             Session::flash('message', 'El email o la contraseña son incorrectos');
             return back()->withErrors(['message'=>'El email o la contraseña son incorrectos'])
                  ->withInput(request([$this->username()]));
+
+        }
+    }
+
+    public function loginMobile(Request $request){
+        $credentials= $this->validate(request(),[
+            $this->username()=> 'required|string',
+            'password'=>'required|string'
+        ]);
+
+        /*         $credentials = $this->credentials($request); */
+        //probar para tatuadores tipouser == 2
+        //$url = $request->url();
+
+        if (Auth::validate($credentials)) {
+            $user = Auth::getLastAttempted();
+            if ($user->tipouser_id == 3) {
+                if($user->verified){
+                    auth()->login($user);
+
+                    $token = $request->session()->get('_token');
+                    //return response()->json($session);
+                    return response()->json([
+                        'user'=>$user,
+                        'token'=>$token,
+                        'tipo'=>'cliente'
+                    ]);
+
+                }else{
+                    return response()->json('message', 'Debe activar su cuenta desde su correo por favor');
+                    //return back()->withInput()->withErrors(['message'=>'Debe activar su cuenta desde su correo por favor']);
+                }
+            } else {
+                auth()->login($user);
+
+                $token = $request->session()->get('_token');
+
+                return response()->json([
+                    'user'=>$user,
+                    'token'=>$token,
+                    'tipo'=>'admin'
+                ]);
+            }
+        } else {
+
+            return response()->json('El email o la contraseña son incorrectos', 403);
+            //return back()->withErrors(['message'=>'El email o la contraseña son incorrectos'])
+            //->withInput(request([$this->username()]));
 
         }
     }
