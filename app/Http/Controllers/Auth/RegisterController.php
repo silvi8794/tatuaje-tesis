@@ -109,7 +109,7 @@ class RegisterController extends Controller
 
                 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 $verified_token =  substr(str_shuffle($permitted_chars), 0, 30);
-                $user = ModelsUser::create([
+                $user = User::create([
                     'email'                 =>  $request->email,
                     'password'              =>  Hash::make($request->password),
                     'admin'                 =>  '-',
@@ -164,5 +164,45 @@ class RegisterController extends Controller
         }
         $notification = Notification::Notification('Credenciales invalidas', 'error');
         return redirect('/')->with('notification', $notification);
+    }
+
+    public function registerMobile(RegisterFormRequest $request)
+    {
+        $userExist = ModelsUser::where('email', $request->email)->first();
+        $dniClient = Cliente::where('dni',$request->dni)->orWhere('email', $request->email)->first();
+
+        if ($userExist == null && $dniClient == null)
+        {
+            $tipoUsuario = TipoUser::where('nombre', 'cliente')->first();
+
+            $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $verified_token =  substr(str_shuffle($permitted_chars), 0, 30);
+
+            $newUser = ModelsUser::create([
+                    'email'=>$request->email,
+                    'password'=>Hash::make($request->password),
+                    'admin'=>'-',
+                    'tipouser_id'=>$tipoUsuario->id,
+                    'verification_token'    =>  $verified_token,
+            ]);
+
+
+        }
+        $usuario = ModelsUser::where('email', $request->email)->first();
+
+        $newClient = Cliente::create([
+            'dni'=>$request->dni,
+            'nombre'=>$request->nombre,
+            'apellido'=>$request->apellido,
+            'email'=>$request->email,
+            'localidad_id'=>$request->localidad_id,
+            'user_id'=>$usuario->id,
+            'sexo_id'=>$request->sexo_id
+
+        ]);
+
+        Mail::to($newUser->email)->send(new EnviarCuentaDeCliente($newUser, $newClient, $request->password));
+        return response()->json([$newUser, $newClient]) ;
+
     }
 }

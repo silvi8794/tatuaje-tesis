@@ -37,7 +37,7 @@ Trait ApiResponser
 
             return $this->successResponse([ 'data' => $collection], $code);
         }
-        
+
         $transformer = $collection->first()->transformer;
 
         $collection = $this->filterData($collection, $transformer);
@@ -51,7 +51,7 @@ Trait ApiResponser
     }
 
     //*---Metodo showOne
-    //Metodo encargado de mostrar una respuesta con una instancia especifica 
+    //Metodo encargado de mostrar una respuesta con una instancia especifica
     //de un Modelo, por ej. cuando retornamos una instancia de un curso existente
     protected function showOne(Model $instance, $code = 200)
     {
@@ -75,7 +75,7 @@ Trait ApiResponser
         return $collection;
     }
 
-    //ordena     
+    //ordena
      protected function sortData(Collection $collection, $transformer)
     {
         if(request()->has('sort_by')){
@@ -129,14 +129,15 @@ Trait ApiResponser
 
     protected function transformData($data, $transformer)
     {
-        $transformation = fractal($data, new $transformer);
+        //$transformation = fractal($data, new $transformer);
 
-        return $transformation->toArray();
+        //return $transformation->toArray();
+        return $data;
     }
 
      protected function showMessage($message, $code = 200)
     {
-        
+
         return $this->successResponse(['data' => $message], $code);
     }
 

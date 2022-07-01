@@ -49,4 +49,5 @@ Route::get('restaurar_categoria/{id?}', 'CategoriaController@restore');
 Route::name('verify')->get('users/verify/{token}','UserController@verify');
 
 Route::name('loginMobile')->post('loginMobile', 'Auth\LoginController@loginMobile');
+Route::name('registerMobile')->post('registerMobile', 'Auth\RegisterController@registerMobile');
 //Route::name('logout')->post('logout',)

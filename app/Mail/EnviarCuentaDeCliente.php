@@ -36,7 +36,7 @@ class EnviarCuentaDeCliente extends Mailable
     public function build()
     {
         return $this->view('emails.bienvenido_cliente')
-            ->from('no-reply@tatuajetesis.com')
+            ->from('silviiperezz@outlook.com')
             ->subject('¡¡ Bienvenido !!');
     }
 }

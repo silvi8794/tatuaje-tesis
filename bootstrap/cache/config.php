@@ -450,16 +450,16 @@
   'mail' => 
   array (
     'driver' => 'smtp',
-    'host' => 'smtp.gmail.com',
-    'port' => '465',
+    'host' => 'smtp.office365.com',
+    'port' => '587',
     'from' => 
     array (
-      'address' => 'tesistatuajesunne@gmail.com',
-      'name' => 'Tatuaje_Tesis',
+      'address' => 'silviiperezz@outlook.com',
+      'name' => 'Example',
     ),
-    'encryption' => 'ssl',
-    'username' => 'tesistatuajesunne@gmail.com',
-    'password' => '1Sae@!e32',
+    'encryption' => 'tls',
+    'username' => 'silviiperezz@outlook.com',
+    'password' => 'Ana22191316',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => 
     array (
