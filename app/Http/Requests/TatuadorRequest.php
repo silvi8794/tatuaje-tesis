@@ -26,18 +26,22 @@ class TatuadorRequest extends FormRequest
     public function rules()
     {
         return [
+            'email'             => 'required|between:3,64|email|unique:users,email,null,id',
+            'password'          => 'required|min:8|confirmed:password-confirm',
+
+
             'dni'=> ['required','unique:tatuadors,dni', new DniValid()],
             'nombre'=> ['required', new AlphaSpace(),'max:30'],
             'apellido'=> ['required', new AlphaSpace(),'max:30'],
-            'email'=> ['required','email','max:30'], 
+            //'email'=> ['required','email','max:30'],
             'especialidad'=> ['required','max:70'],
             'estado'=> ['string'],
-            'sucursal_id'=> ['required', 'numeric', 'min:1'],
-            'localidad_id'=> ['required', 'numeric', 'min:1'],
-            'sexo_id'=> ['required', 'numeric', 'min:1'],
-            'user_id'=> ['required', 'numeric', 'min:1'],
-           
-            
+            'sucursal_id'=> 'required|numeric|exists:sucursals,id', 'min:1',
+            'localidad_id'=>'required|exists:localidads,id',
+            'sexo_id'=> 'required|numeric|exists:sexos,id', 'min:1',
+            //'user_id'=> ['required', 'numeric', 'min:1'],
+
+
         ];
     }
 
@@ -60,8 +64,8 @@ class TatuadorRequest extends FormRequest
             'localidad_id.required'=>'La localidad es obligatoria',
             'sexo_id.required'=>'El sexo es obligatorio',
             'user_id.numeric' => 'El id del usuario debe ser numerico',
-        
-         ];    
 
-    }   
+         ];
+
+    }
 }

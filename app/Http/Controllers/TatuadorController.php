@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EnviarCuentaDeCliente;
+use App\Models\TipoUser;
 use Illuminate\Http\Request;
 use App\Models\Tatuador;
 use App\Models\Sucursal;
@@ -10,6 +12,9 @@ use App\Models\Sexo;
 use App\Models\User;
 use App\Http\Requests\TatuadorRequest;
 use App\Http\Controllers\ApiController;
+use App\Models\User as ModelsUser;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 
 class TatuadorController extends ApiController
@@ -24,7 +29,7 @@ class TatuadorController extends ApiController
 
     {
         $campos = $request->all();
-        
+
         $tatuador = Tatuador::create($campos);
 
         return $this->showOne($tatuador, 201);
@@ -38,8 +43,8 @@ class TatuadorController extends ApiController
 
 
    public function update(Request $request, Tatuador $tatuador)
-    {    
-            
+    {
+
         $reglas = [
             'dni'=>'integer|max:8|unique:tatuadors,dni,' . $tatuador->id,
             'nombre'=> 'string|max:30',
@@ -130,9 +135,9 @@ class TatuadorController extends ApiController
         //return view('usuarios.listadoTrash',compact('usuarios'));
         return $this->showAll($tatuador);
     }
-        
-        
-    
+
+
+
     public function restore($id)
     {
         $tatuador = Tatuador::withTrashed()->where('id', '=', $id)->firstOrFail();
@@ -153,8 +158,8 @@ class TatuadorController extends ApiController
 
 
     /*public function valido_email(Request $request)
-    {        
-       $user= User::where('email', $request['email'])->get();    
+    {
+       $user= User::where('email', $request['email'])->get();
         if (count($user) > 0){
            return 1;
         }
@@ -162,4 +167,47 @@ class TatuadorController extends ApiController
            return 0;
         }
     }*/
+
+    public function registerMobile(TatuadorRequest $request)
+    {
+        $userExist = ModelsUser::where('email', $request->email)->first();
+        $dniTatuador = Tatuador::where('dni',$request->dni)->orWhere('email', $request->email)->first();
+
+        if ($userExist == null && $dniTatuador == null)
+        {
+            $tipoUsuario = TipoUser::where('nombre', 'tatuador')->first();
+
+            $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $verified_token =  substr(str_shuffle($permitted_chars), 0, 30);
+
+            $newUser = ModelsUser::create([
+                'email'=>$request->email,
+                'password'=>Hash::make($request->password),
+                'admin'=>'-',
+                'tipouser_id'=>$tipoUsuario->id,
+                'verification_token'    =>  $verified_token,
+            ]);
+
+
+        }
+        $usuario = ModelsUser::where('email', $request->email)->first();
+
+        $newTatuador = Tatuador::create([
+            'dni'=>$request->dni,
+            'nombre'=>$request->nombre,
+            'apellido'=>$request->apellido,
+            'email'=>$request->email,
+            'especialidad'=>$request->especialidad,
+            'estado'=>$request->estado,
+            'sucursal_id'=>$request->sucursal_id,
+            'localidad_id'=>$request->localidad_id,
+            'sexo_id'=>$request->sexo_id,
+            'user_id'=>$usuario->id
+
+        ]);
+
+        Mail::to($newUser->email)->send(new EnviarCuentaDeCliente($newUser, $newTatuador, $request->password));
+        return response()->json([$newUser, $newTatuador]) ;
+
+    }
 }

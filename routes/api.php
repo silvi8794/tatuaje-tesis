@@ -50,4 +50,5 @@ Route::name('verify')->get('users/verify/{token}','UserController@verify');
 
 Route::name('loginMobile')->post('loginMobile', 'Auth\LoginController@loginMobile');
 Route::name('registerMobile')->post('registerMobile', 'Auth\RegisterController@registerMobile');
+Route::name('registerMobileTatuador')->post('registerMobileTatuador', 'TatuadorController@registerMobile');
 //Route::name('logout')->post('logout',)

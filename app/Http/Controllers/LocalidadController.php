@@ -15,6 +15,7 @@ class LocalidadController extends ApiController
     {
     	$localidades = Localidad::with('provincia')->get();
     	return $this->showAll ($localidades);
+
     }
 
     public function store(LocalidadRequest $request)
@@ -26,7 +27,7 @@ class LocalidadController extends ApiController
 
     public function show($id){
         $localidad = Localidad::where('id', '=', $id)->firstOrFail();
-        return $this->showOne($localidad); 
+        return $this->showOne($localidad);
      }
 
 

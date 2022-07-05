@@ -30,9 +30,8 @@ class ClienteRequest extends FormRequest
            'nombre' => ['required', new AlphaSpace(),'max:30'],
            'apellido'=>['required', new AlphaSpace(),'max:40'],
            'email'=> ['required','email','unique:clientes,email','max:40'],
-/*           'localidad_id'=> ['required', 'numeric', 'min:1'],
-           'user_id'=> ['required', 'numeric', 'min:1'], */
            'sexo_id'=> ['required', 'numeric', 'min:1'],
+            'localidad_id'=>['required', 'numeric', 'min:1'],
         ];
     }
 
@@ -55,11 +54,6 @@ class ClienteRequest extends FormRequest
             'email.max'=> 'El :attribute debe contener como maximo 40 caracteres',
             'email.unique' => 'El :attribute ingresado ya existe',
             'email.email' => 'Formato del :attribute incorrecto',
-
-/*            'localidad_id.required'=>'La localidad es obligatoria',
-            'localidad_id.numeric' => 'La localidad debe ser numerica',
-            'user_id.required'=>'El usuario es obligatorio',
-            'user_id.numeric' => 'El id del usuario debe ser numerico', */
             'sexo_id.required'=>'El sexo es obligatorio',
 
 
